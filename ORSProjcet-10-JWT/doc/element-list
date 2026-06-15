@@ -1,0 +1,11 @@
+com.rays
+com.rays.attachment
+com.rays.common
+com.rays.config
+com.rays.ctl
+com.rays.dao
+com.rays.dto
+com.rays.email
+com.rays.exception
+com.rays.form
+com.rays.service
