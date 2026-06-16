@@ -6,6 +6,7 @@ com\rays\dto\SubjectDTO.class
 com\rays\form\ForgetPasswordForm.class
 com\rays\dao\CollegeDAOImpl.class
 com\rays\dao\CourseDAOInt.class
+com\rays\form\CommandModelForm.class
 com\rays\dao\MarksheetDAOImpl.class
 com\rays\dao\StudentDAOInt.class
 com\rays\attachment\AttachmentDAO.class
@@ -27,6 +28,7 @@ com\rays\form\MarksheetForm.class
 com\rays\dao\TimeTableDAOInt.class
 com\rays\ctl\RoleCtl.class
 com\rays\service\RoleServiceImpl.class
+com\rays\ctl\CommandModelCtl.class
 com\rays\form\SecretForm.class
 com\rays\ctl\MarksheetCtl.class
 com\rays\dao\CourseDAOImpl.class
@@ -48,6 +50,7 @@ com\rays\ctl\ContactCtl.class
 com\rays\ctl\SubjectCtl.class
 com\rays\dao\CollegeDAOInt.class
 com\rays\service\CollegeServiceImpl.class
+com\rays\dao\CommandModelDAOImpl.class
 com\rays\config\WebSecurityConfig.class
 com\rays\service\CourseServiceImpl.class
 com\rays\dao\FacultyDAOInt.class
@@ -71,11 +74,13 @@ com\rays\ctl\TimeTableCtl.class
 com\rays\dto\StudentDTO.class
 com\rays\service\TimeTableServiceImpl.class
 com\rays\common\DropdownList.class
+com\rays\dao\CommandModelDAOInt.class
 com\rays\dto\TimeTableDTO.class
 com\rays\ORSProject10Application$1.class
 com\rays\dto\PriorityDTO.class
 com\rays\service\RoleServiceInt.class
 com\rays\dao\FacultyDAOImpl.class
+com\rays\service\CommandModelServiceInt.class
 com\rays\form\CourseForm.class
 com\rays\common\BaseDTO.class
 com\rays\ctl\TestCtl.class
@@ -95,6 +100,7 @@ com\rays\common\UserContext.class
 com\rays\dao\PriorityDAOImpl.class
 com\rays\dao\ContactDAOImpl.class
 com\rays\dto\UserDTO.class
+com\rays\dto\CommandModelDTO.class
 com\rays\common\UserContextHolder.class
 com\rays\dto\CollegeDTO.class
 com\rays\form\ChangePasswordForm.class
@@ -102,6 +108,7 @@ com\rays\email\EmailBuilder.class
 com\rays\service\SecretServiceImpl.class
 com\rays\service\FacultyServiceInt.class
 com\rays\service\JWTUserDetailsService.class
+com\rays\service\CommandModelServiceImpl.class
 com\rays\dao\RoleDAOImpl.class
 com\rays\form\PriorityForm.class
 com\rays\dao\PriorityDAOInt.class

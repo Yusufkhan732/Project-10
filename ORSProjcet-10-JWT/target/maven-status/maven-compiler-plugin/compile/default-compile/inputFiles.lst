@@ -10,6 +10,7 @@ D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\common\UserContext
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\SubjectServiceInt.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\CollegeServiceImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dto\MarksheetDTO.java
+D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\CommandModelServiceInt.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dao\FacultyDAOImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\ORSProject10Application.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\CourseServiceImpl.java
@@ -33,6 +34,7 @@ D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\SubjectSer
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dao\ContactDAOImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dao\CourseDAOImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\form\TimeTableForm.java
+D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dao\CommandModelDAOInt.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dao\CollegeDAOInt.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\form\UserRegistrationForm.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\form\CollegeForm.java
@@ -53,9 +55,11 @@ D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\ctl\ContactCtl.jav
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\FacultyServiceInt.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\common\BaseCtl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dto\RoleDTO.java
+D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\ctl\CommandModelCtl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\PriorityServiceInt.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\email\EmailMessage.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\email\EmailServiceInt.java
+D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dto\CommandModelDTO.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dao\CollegeDAOImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\RoleServiceImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\CourseServiceInt.java
@@ -85,12 +89,14 @@ D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\StudentSer
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\form\ChangePasswordForm.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\ctl\StudentCtl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\ctl\TimeTableCtl.java
+D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\form\CommandModelForm.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\attachment\AttachmentDAO.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\common\ApplicationExceptionHandlerCtl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dto\SecretDTO.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\ctl\FacultyCtl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dao\SecretDAOInt.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\TimeTableServiceInt.java
+D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dao\CommandModelDAOImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\FacultyServiceImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dto\StudentDTO.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\form\ContactForm.java
@@ -98,6 +104,7 @@ D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dto\CollegeDTO.jav
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\MarksheetServiceImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\ctl\LoginCtl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\ctl\PriorityCtl.java
+D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\CommandModelServiceImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\ContactServiceInt.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\service\TimeTableServiceImpl.java
 D:\mission-project10\ORSProjcet-10-JWT\src\main\java\com\rays\dto\CourseDTO.java
