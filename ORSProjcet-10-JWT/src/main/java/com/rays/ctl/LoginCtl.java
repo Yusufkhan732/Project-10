@@ -16,6 +16,7 @@ import com.rays.common.BaseCtl;
 import com.rays.common.ORSResponse;
 import com.rays.config.JWTUtil;
 import com.rays.dto.UserDTO;
+import com.rays.form.ForgetPasswordForm;
 import com.rays.form.LoginForm;
 import com.rays.form.UserForm;
 import com.rays.form.UserRegistrationForm;
@@ -70,6 +71,27 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 
 		res.setSuccess(true);
 		res.addMessage("User has been registered successfully..!!");
+		return res;
+	}
+
+	/**
+	 * Handle forgot password requests and send email.
+	 */
+	@PostMapping("/forgetPassword")
+	public ORSResponse changePassword(@RequestBody @Valid ForgetPasswordForm form, BindingResult bindingResult) {
+		ORSResponse res = validate(bindingResult);
+		if (!res.isSuccess())
+			return res;
+
+		boolean flag = baseService.forgetPassword(form.getLoginId());
+		if (flag) {
+			res.setSuccess(true);
+			res.addMessage("Password sent to your email");
+		} else {
+			res.setSuccess(false);
+			res.addMessage("Login Id not found");
+		}
+
 		return res;
 	}
 

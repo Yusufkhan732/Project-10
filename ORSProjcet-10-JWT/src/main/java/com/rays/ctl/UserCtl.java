@@ -88,14 +88,11 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 	/**
 	 * Change user password.
 	 */
-	@PostMapping("forgetPassword")
+	@PostMapping("changePassword")
 	public ORSResponse changePassword(@RequestBody @Valid ChangePasswordForm form, BindingResult bindingResult) {
-
 		ORSResponse res = validate(bindingResult);
-
-		if (!res.isSuccess()) {
+		if (!res.isSuccess())
 			return res;
-		}
 
 		UserDTO changedDto = baseService.changePassword(form.getLoginId(), form.getOldPassword(), form.getNewPassword(),
 				userContext);
@@ -108,7 +105,6 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 
 		res.setSuccess(true);
 		res.addMessage("Password has been changed");
-
 		return res;
 	}
 

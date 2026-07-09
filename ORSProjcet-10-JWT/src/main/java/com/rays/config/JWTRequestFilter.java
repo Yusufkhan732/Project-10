@@ -8,12 +8,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.web.servlet.HandlerExceptionResolver;
 
 import com.rays.common.UserContext;
 import com.rays.common.UserContextHolder;
@@ -36,6 +38,10 @@ public class JWTRequestFilter extends OncePerRequestFilter {
 
 	@Autowired
 	private JWTUserDetailsService jwtUserDetailsService;
+
+	@Autowired
+	@Qualifier("handlerExceptionResolver")
+	private HandlerExceptionResolver resolver;
 
 	/**
 	 * Intercepts request, validates JWT and sets security context.
@@ -85,8 +91,10 @@ public class JWTRequestFilter extends OncePerRequestFilter {
 				UserContextHolder.setContext(context);
 
 			} catch (Exception e) {
-				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-				response.getWriter().write("Token is invalid... plz login again..!!");
+//				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//				response.getWriter().write("Token is invalid... plz login again..!!yusuf";
+
+				resolver.resolveException(request, response, null, e);
 				return;
 			}
 		}

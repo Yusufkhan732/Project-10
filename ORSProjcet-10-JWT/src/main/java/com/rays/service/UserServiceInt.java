@@ -12,7 +12,7 @@ public interface UserServiceInt extends BaseServiceInt<UserDTO> {
 
 	public UserDTO authenticate(String name, String password);
 
-	public UserDTO forgetPassword(String loginId);
+	public boolean forgetPassword(String loginId);
 
 	public UserDTO changePassword(String loginId, String oldPassword, String newPassword, UserContext userContext);
 

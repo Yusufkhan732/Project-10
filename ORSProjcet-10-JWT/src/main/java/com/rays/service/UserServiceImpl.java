@@ -73,12 +73,12 @@ public class UserServiceImpl extends BaseServiceImpl<UserDTO, UserDAOInt> implem
 	}
 
 	@Override
-	public UserDTO forgetPassword(String loginId) {
+	public boolean forgetPassword(String loginId) {
 
 		UserDTO dto = findByLoginId(loginId, null);
 
 		if (dto == null) {
-			return null;
+			return false;
 		}
 
 		// Data map banayenge
@@ -103,46 +103,49 @@ public class UserServiceImpl extends BaseServiceImpl<UserDTO, UserDAOInt> implem
 		// Send mail
 		emailservice.sendMail(email);
 
-		return dto;
+		return true;
 	}
 
+	/**
+	 * Changes the password for a user and sends a notification email.
+	 * 
+	 * @param loginId     Login ID of the user
+	 * @param oldPassword Current password of the user
+	 * @param newPassword New password to set
+	 * @param userContext Context information of the user making the change
+	 * @return Updated UserDTO if successful, otherwise null
+	 */
 	@Override
 	public UserDTO changePassword(String loginId, String oldPassword, String newPassword, UserContext userContext) {
 
 		UserDTO dto = findByLoginId(loginId, null);
+		dto.setCreatedBy(userContext.getLoginId());
 
-		// Check user exist + old password match
 		if (dto != null && oldPassword.equals(dto.getPassword())) {
 
-			// Update password
 			dto.setPassword(newPassword);
 			update(dto, userContext);
 
-			// Prepare email data
 			HashMap<String, String> map = new HashMap<>();
-
 			map.put("firstName", dto.getFirstName());
 			map.put("lastName", dto.getLastName());
 			map.put("login", dto.getLoginId());
 			map.put("password", dto.getPassword());
 
-			// Generate HTML message
 			String message = EmailBuilder.getChangePasswordMessage(map);
 
-			// Create Email object
 			EmailMessage email = new EmailMessage();
 			email.setTo(dto.getLoginId());
 			email.setSubject("ORS Password Changed Successfully");
 			email.setMessage(message);
 			email.setMessageType(EmailMessage.HTML_MSG);
 
-			// Send mail
 			emailservice.sendMail(email);
-
 			return dto;
 
 		} else {
-			return null;
+
 		}
+		return dto;
 	}
 }

@@ -2,6 +2,7 @@ package com.rays.form;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -34,6 +35,16 @@ public class UserForm extends BaseForm {
 	@NotNull(message = "Role is required")
 	@Min(1)
 	private Long roleId;
+
+	private Long imageId;
+
+	public Long getImageId() {
+		return imageId;
+	}
+
+	public void setImageId(Long imageId) {
+		this.imageId = imageId;
+	}
 
 	private String roleName = null;
 
@@ -156,6 +167,7 @@ public class UserForm extends BaseForm {
 		dto.setPhone(phone);
 		dto.setAlternateMobile(alternateMobile);
 		dto.setStatus(status);
+		dto.setImageId(imageId);
 
 		return dto;
 	}
