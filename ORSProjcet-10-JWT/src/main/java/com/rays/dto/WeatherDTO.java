@@ -66,7 +66,7 @@ public class WeatherDTO extends BaseDTO {
 
 	@Override
 	public String getLabel() {
-		return cityName;
+		return alertCode;
 	}
 
 	@Override
