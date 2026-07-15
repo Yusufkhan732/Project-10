@@ -1,3 +1,4 @@
+
 package com.rays.common;
 
 import java.util.List;
@@ -22,6 +23,8 @@ public class BaseServiceImpl<T extends BaseDTO, D extends BaseDAOInt<T>> impleme
 
 	/**
 	 * Add new record.
+	 * 
+	 * Agar readOnly specify nahi karte, to by default readOnly = false hota hai.
 	 */
 	@Transactional(readOnly = false)
 	public long add(T dto, UserContext userContext) throws DuplicateRecordException {

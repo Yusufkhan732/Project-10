@@ -161,6 +161,12 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 
 	/**
 	 * Search without pagination.
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
 	 */
 	public List search(T dto, UserContext userContext) {
 		return search(dto, 0, 0, userContext);
